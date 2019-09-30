@@ -28,3 +28,8 @@ class MyApp extends StatelessWidget {
     );
   }
 }
+
+//--pubspec.yaml--
+// flutter:
+//   assets:
+//     - images/

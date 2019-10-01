@@ -19,7 +19,7 @@ class MyApp extends StatelessWidget {
             decoration: BoxDecoration(
               color: Colors.white,
               image: DecorationImage(
-                image: AssetImage('images/my_image1.jpg')
+                image: AssetImage('assets/images/succulent.jpg')
               )
             ),
         )

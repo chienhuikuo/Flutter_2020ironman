@@ -39,7 +39,7 @@ class ParentTapState extends State<ParentTap> {
   Widget build(BuildContext context) {
     return Container(
       decoration: BoxDecoration(
-        color: Color.fromRGBO(110, 80, 10, 1),
+        color: Colors.grey[900],
       ),
       child: MyTapbox(
         active: _active,
@@ -72,7 +72,7 @@ class MyTapbox extends StatelessWidget{
         width: 200.0,
         height: 200.0,
         decoration: BoxDecoration(
-          color: active ? Colors.lightGreen[700] : Colors.grey[600],  //true:'green', false:'grey'
+          color: active ? Colors.lightGreen : Colors.pink,  //true:'green', false:'grey'
         ),
       ),
     );

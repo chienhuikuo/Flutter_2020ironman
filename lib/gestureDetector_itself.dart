@@ -48,7 +48,7 @@ class MyTapboxState extends State<MyTapbox> {
         width: 200.0,
         height: 200.0,
         decoration: BoxDecoration(
-          color: _active ? Colors.lightGreen[700] : Colors.grey[600],  //true:'green', false:'grey'
+          color: _active ? Colors.lightGreen : Colors.pink,  //true:'green', false:'grey'
         ),
       ),
     );

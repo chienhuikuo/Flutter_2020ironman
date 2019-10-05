@@ -15,7 +15,7 @@ class MyApp extends StatelessWidget {
 }
 class MyHero extends StatelessWidget {
   Widget build(BuildContext context) {
-    timeDilation = 1.0; // 1.0 means normal animation speed.
+    timeDilation = 1.0; // 1.0 means normal animation speed. import'scheduler.dart'
     var screenWidth = MediaQuery.of(context).size.width;
     var rowWidth = screenWidth-24;
 
@@ -58,7 +58,7 @@ class MyHero extends StatelessWidget {
               },
             ),
           ),
-          SizedBox(width: 8,),
+          SizedBox(width: 8),
           Align(
             alignment: Alignment.topRight,
             child: PhotoHero(

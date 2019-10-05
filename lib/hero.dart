@@ -18,7 +18,7 @@ class MyHero extends StatelessWidget {
     timeDilation = 1.0; // 1.0 means normal animation speed.
     var screenWidth = MediaQuery.of(context).size.width;
     var rowWidth = screenWidth-24;
-    
+
     return Scaffold(
       appBar: AppBar(
         title: const Text('Hero List'),
@@ -51,6 +51,7 @@ class MyHero extends StatelessWidget {
                           },
                         ),
                       ),
+                      backgroundColor: Colors.yellow[50],
                     );
                   }
                 ));

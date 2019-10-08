@@ -6,10 +6,19 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Fractionally Sized Box',
+      title: 'MediaQuery',
       home: Scaffold(
-        appBar: AppBar(title: const Text('Fractionally Sized Box')),
+        appBar: AppBar(title: const Text('MediaQuery')),
         body: Myfitbox(),
+      ),
+      theme: ThemeData(
+        textTheme: TextTheme(
+          title: TextStyle(
+            color: Colors.white,
+            fontSize: 20,
+            fontWeight: FontWeight.bold,
+          ),
+        ),
       ),
     );
   }
@@ -33,37 +42,24 @@ class Myfitbox extends StatelessWidget{
     return Container(
       alignment: Alignment.center,
       child: FractionallySizedBox(  //FractionallySizedBox always align:center
-        widthFactor: 0.7,
+        widthFactor: 0.8,
         heightFactor: myheight,
         child: DecoratedBox(
           decoration:BoxDecoration(
             color: Colors.pink[300],
           ),
           child: Center(
-            child: RichText(
-              textAlign: TextAlign.left,
-              softWrap: true,
-              text: TextSpan(
-                style: TextStyle(
-                color: Colors.white,
-                fontSize: 24,
-                fontWeight: FontWeight.bold,
-                ),
-                children: [
-                  TextSpan(text:'現在方向是'+screenOrientation.toString()),
-                  TextSpan(text: '螢幕寬度是'+screenSizeWidth.toString()+' px'),
-                  TextSpan(text: '像素比率是'+screenPixelRatio.toString()),
-                ]
-                )
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: <Widget>[
+                  Text('現在方向是'+screenOrientation.toString(),style: Theme.of(context).textTheme.title),
+                  Text('螢幕寬度是'+screenSizeWidth.toString()+' px',style: Theme.of(context).textTheme.title),
+                  Text('像素比率是'+screenPixelRatio.toString(),style: Theme.of(context).textTheme.title),
+              ],
             )
           )
         )
       )
-      
-      
     );
-    
-    
   }
-
 }

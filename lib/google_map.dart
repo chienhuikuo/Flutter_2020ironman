@@ -22,14 +22,19 @@ class _MyAppState extends State<MyApp> {
     return MaterialApp(
       home: Scaffold(
         appBar: AppBar(
-          title: Text('Maps Sample App'),
+          title: Text('Google Maps'),
           backgroundColor: Colors.green[700],
         ),
         body: GoogleMap(
+          zoomGesturesEnabled:false,  //縮放手勢
           onMapCreated: _onMapCreated,
+          mapType: MapType.normal, 
+          compassEnabled: true,  //指北針
           initialCameraPosition: CameraPosition(
-            target: _center,
-            zoom: 11.0,
+            target: _center,  //中心點座標
+            zoom: 16.0,  //Camera縮放尺寸，越近數值越大，越遠數值越小，預設為0
+            bearing: 30,  //Camera旋轉的角度，方向為逆時針轉動，預設為0
+            tilt: 120  //Camera侵斜角度
           ),
         ),
       ),
